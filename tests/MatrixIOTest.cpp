@@ -25,7 +25,7 @@ BOOST_AUTO_TEST_CASE(TestOpenData)
 
   Configuration configuration{"testconfig.yml"};
 
-  MatrixXd result = openData(configuration.MatrixFileName, configuration.MatrixSize);
+  MatrixXd result = openData(configuration.matrixFileName, configuration.matrixSize);
 
   // Check if read values are as expected
   BOOST_CHECK(result.isApprox(expectedMatrix));
