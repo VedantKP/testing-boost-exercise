@@ -9,3 +9,15 @@ jobs:
       run: sudo apt update && sudo apt install -y clang-format
     - name: Run clang-format lint
       run: clang-format -i src/*.cpp src/*.hpp tests/*.cpp --dry-run -Werror
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Install all dependencies
+      run: sudo apt update && sudo apt install -y libboost-test-dev libeigen3-dev libyaml-cpp-dev cmake
+    - name: Build using cmake
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        make -j
