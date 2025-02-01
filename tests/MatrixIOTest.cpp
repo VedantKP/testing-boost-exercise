@@ -4,7 +4,6 @@
 #include <fstream>
 #include "../src/matrixIO.hpp"
 
-
 #define BOOST_TEST_DYN_LINK
 
 using namespace Eigen;
