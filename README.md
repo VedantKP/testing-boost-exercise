@@ -1,3 +1,5 @@
+![SideMade Tests](https://github.com/VedantKP/testing-boost-exercise/actions/workflows/sidemade-ci.yml/badge.svg?branch=extend-tests)
+
 # SIDEMADE - Simple Dense Matrix Decomposition
 
 A simple demo code to read dense matrices from files and solve linear systems with them.
