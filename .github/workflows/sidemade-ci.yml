@@ -1,0 +1,11 @@
+name: SideMade Tests
+on: [push]
+jobs:
+  style_check:
+    runs-on: ubuntu-24.04
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup clang-format
+      run: sudo apt update && sudo apt install -y clang-format
+    - name: Run clang-format lint
+      run: clang-format -i src/*.cpp src/*.hpp tests/*.cpp --dry-run -Werror
